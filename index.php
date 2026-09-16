@@ -1,16 +1,14 @@
-<?php
-    echo"I likeeeeeee pizza <br>";
-    echo"Its really goof";
+<?php 
+    $name = "Neha";
+    $food = "pizza";
+    $cost = 5.3;
+    $age = 3;
+    $human = true;
+    $animal = false;
+    echo "hello {$name} age {$age} <br>";
+    echo "You like {$food} of cost \${$cost} <br>";
+    echo "You are a human {$human} <br>";
+    echo "You are a animal(for false) {$animal} <br>";
+    $total = $cost * $cost ; 
+    echo "Total = \${$total} <br>";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <br>
-    <button>Hello</button>
-</body>
-</html>
