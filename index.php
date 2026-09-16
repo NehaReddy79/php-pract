@@ -1,14 +1,22 @@
 
 <?php 
     
-    $age = 135;
-    switch($age){
-        case 15 : echo "school <br>"; break;
-        case 25 : echo "college <br>"; break;
-        case 35 : echo "Office <br>"; break;
-        case 45 : echo "Have kids <br>"; break;
-        case 55 : echo "Retire <br>"; break;
-        case 65 : echo "Die <br>"; break;
-        default : echo "Invalid age <br>";
+   $foods = array("apple","orange","banana","coco");
+   for($i = 0 ; $i < 4; $i++){
+        echo "{$foods[$i]} <br>"; 
+   }
+    array_push($foods, "grapes" , "kiwi");
+    array_pop($foods);
+   echo "Using for each loop <br> ";
+    foreach($foods as $food){
+        echo $food . "<br>";
     }
+
+    echo "reverse food <br>";
+    $rever = array_reverse($foods);
+     foreach($rever as $food){
+        echo $food . "<br>";
+    }
+    echo $foods[3] . "<br>";
+    echo count($foods);
 ?>
