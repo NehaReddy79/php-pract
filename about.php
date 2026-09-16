@@ -1,8 +1,5 @@
-
-
 <?php 
     include("header.html");
-    
     
 ?>
 <!DOCTYPE html>
@@ -14,9 +11,6 @@
 </head>
 <body>
     This is the body of the website<br>
+    This is the about page <br>
 </body>
-</html>
-
-<?php 
-    include("footer.html");
- ?>
+</html

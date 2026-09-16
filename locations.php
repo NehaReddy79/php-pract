@@ -1,9 +1,6 @@
-
-
 <?php 
     include("header.html");
-    
-    
+     
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +11,6 @@
 </head>
 <body>
     This is the body of the website<br>
+    This is the locations page <br>
 </body>
-</html>
-
-<?php 
-    include("footer.html");
- ?>
+</html
