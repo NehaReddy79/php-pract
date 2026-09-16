@@ -6,34 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="index.php" method="post">
+        username : <br>
+        <input type = "text" name="username"><br>
+        age : <br>
+        <input type = "text" name="age"><br>
+        <input type="submit" name="login" value="login">
+    </form>
 </body>
 </html>
 
 <?php 
-    
-    function fun($name){
-        echo "Fun {$name} <br>";
-        echo "Fun {$name}<br>";
-        echo "Fun {$name} <br>";
-        echo "Fun {$name}<br>";
-        echo "Fun {$name}<br>";
-        echo "Fun {$name}<br>";
-    }
-    fun("lando");
-    fun("George");
+    if(isset($_POST["login"])){
 
-    function even($n){
-        $res = $n % 2;
-        if($res == 0){
-            return "even <br>";
+        // $user = filter_input(INPUT_POST , "username" , FILTER_SANITIZE_SPECIAL_CHARS);
+        // echo "Helo {$user} <br>";
+        // $age = filter_input(INPUT_POST , "age" , FILTER_SANITIZE_NUMBER_INT);
+        // echo "You are {$age} <br>";
+
+        $age = filter_input(INPUT_POST , "age" , FILTER_VALIDATE_INT);
+        if(empty($age)){
+            echo "Invalid , enter int only <br>";
         }else{
-            return "odd <br>";
+            echo "You are {$age} <br>";
         }
     }
-
-    $res = even(25);
-    echo $res;
-    $res = even(40);
-    echo $res;
+    
 ?>
