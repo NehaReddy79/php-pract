@@ -1,14 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <label>Username : </label>
+        <input type="text" name="username"><br>
+        <label>Passowrd : </label>
+        <input type ="password" name="password"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
 <?php 
-    $name = "Neha";
-    $food = "pizza";
-    $cost = 5.3;
-    $age = 3;
-    $human = true;
-    $animal = false;
-    echo "hello {$name} age {$age} <br>";
-    echo "You like {$food} of cost \${$cost} <br>";
-    echo "You are a human {$human} <br>";
-    echo "You are a animal(for false) {$animal} <br>";
-    $total = $cost * $cost ; 
-    echo "Total = \${$total} <br>";
+    echo $_POST["username"] . "<br>";
+    echo "{$_POST["password"]} <br>";
+
 ?>
