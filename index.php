@@ -1,9 +1,5 @@
-
-
 <?php 
-    include("header.html");
-    
-    
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +9,28 @@
     <title>Document</title>
 </head>
 <body>
-    This is the body of the website<br>
+    <form action="index.php" method="post">
+        username : <br>
+        <input type="text" name="username"><br>
+        password : <br>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login" name="login">
+    </form>
+    
 </body>
 </html>
 
 <?php 
-    include("footer.html");
+    if(isset($_POST["login"])){
+       
+        
+        if(!empty($_POST["password"]) && !empty($_POST["username"])){
+            $_SESSION["username"] = $_POST["username"];
+            $_SESSION["password"] = $_POST["password"];
+
+            header("Location: home.php");
+        }else{
+            echo "Missing fields <br>";
+        }
+    }
  ?>
